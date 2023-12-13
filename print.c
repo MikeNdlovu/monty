@@ -22,13 +22,14 @@ size_t print_list(const stack_t *h)
 /**
  * print_last - prints linked list
  * @h: pointer to linked list
+ * @i: number line is located in
  * Return: success
  */
-size_t print_last(const stack_t *h)
+size_t print_last(const stack_t *h, int i)
 {
 	if (h == NULL)
 	{
-	fprintf(stderr, "L<line_number>: can't pint, stack empty\n");
+	fprintf(stderr, "L%d: can't pint, stack empty\n", i);
 	_exit(EXIT_FAILURE);
 	}
 

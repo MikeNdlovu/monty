@@ -36,7 +36,7 @@ int main(int agc, char **agv)
 		else if (st[0] == 'p' && st[1] == 'a' && st[2] == 'l' && st[3] == 'l')
 		print_list(head);
 		else if (st[0] == 'p' && st[1] == 'i' && st[2] == 'n' && st[3] == 't')
-		print_last(head);
+		print_last(head, i);
 		else
 		unknown(st, i);
 	}

@@ -23,3 +23,14 @@ void unknown(char *store, int i)
 	fprintf(stderr, "L%d: unknown instruction %s\n", i, store);
 	_exit(EXIT_FAILURE);
 }
+
+/**
+ * unknown - number of args has to be two
+ * @i: line number
+ * Return: void
+ */
+void empty(int i)
+{
+	fprintf(stderr, "L%d: can't pint, stack empty\n", i);
+	_exit(EXIT_FAILURE);
+}
