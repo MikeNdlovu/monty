@@ -39,6 +39,6 @@ typedef struct instruction_s
 stack_t *add_node(stack_t **head, unsigned int num);
 size_t print_list(const stack_t *h);
 size_t free_list(stack_t *h);
-void argc_errors(int n);
+void argc_errors();
 
 #endif

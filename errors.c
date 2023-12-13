@@ -6,7 +6,7 @@
  * Return: void
  */
 
-void argc_errors(int n)
+void argc_errors()
 {
 	fprintf(stderr, "USAGE: monty file\n");
 	_exit(EXIT_FAILURE);

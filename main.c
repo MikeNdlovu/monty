@@ -10,11 +10,10 @@
 int main(int agc, char **agv)
 {
 	FILE *fptr;
-	char *store, *push = "push", *tok;
+	char *store;
 	int num;
-
-	fptr = fopen(agv[1], "r");
 	stack_t *head = NULL;
+	fptr = fopen(agv[1], "r");
 
 	if (agc != 2)
 	argc_errors(agc);
