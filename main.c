@@ -10,33 +10,39 @@
 int main(int agc, char **agv)
 {
 	FILE *fptr;
-	char *store;
-	int num;
+	char *st;
+	int num, i = 0;
 	stack_t *head = NULL;
+
 	fptr = fopen(agv[1], "r");
 
 	if (agc != 2)
-	argc_errors(agc);
+	argc_errors();
 	else if (fptr == NULL)
 	fprintf(stderr, "Error: Can't open file %s\n", agv[1]);
 	else
 	{
-	store = malloc(sizeof(char) * 15);
+	st = malloc(sizeof(char) * 15);
 
-	while (fgets(store, 15, fptr) != NULL)
+	while (fgets(st, 15, fptr) != NULL)
 	{
-		if (store[0] == 'p' && store[1] == 'u' && store[2] == 's' && store[3] == 'h')
+		i++;
+		strtok(st, " \n");
+		if (st[0] == 'p' && st[1] == 'u' && st[2] == 's' && st[3] == 'h')
 		{
-		strtok(store, " \n");
 		num = atoi(strtok(NULL, " \n"));
 		add_node(&head, num);
 		}
-		if (store[0] == 'p' && store[1] == 'a' && store[2] == 'l' && store[3] == 'l')
+		else if (st[0] == 'p' && st[1] == 'a' && st[2] == 'l' && st[3] == 'l')
 		print_list(head);
+		else if (st[0] == 'p' && st[1] == 'i' && st[2] == 'n' && st[3] == 't')
+		print_last(head);
+		else
+		unknown(st, i);
 	}
 	free_list(head);
 	fclose(fptr);
-	free(store);
+	free(st);
 	}
 	return (0);
 }
