@@ -1,0 +1,4 @@
+                else if (st[0] == 'a' && st[1] == 'd' && st[2] == 'd')
+                add(&head, i);
+                else if (st[0] == 'n' && st[1] == 'o' && st[2] == 'p')
+                ;
