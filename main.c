@@ -49,6 +49,8 @@ int main(int agc, char **agv)
 		sub(&head, i);
 		else if (st[0] == 'd' && st[1] == 'i' &&  st[2] == 'v')
 		div_int(&head, i);
+		else if (st[0] == 'm' && st[1] == 'u' &&  st[2] == 'l')
+		mul_int(&head, i);
 		else
 		unknown(st, i);
 	}
