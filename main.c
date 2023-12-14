@@ -38,7 +38,7 @@ int main(int agc, char **agv)
 		else if (st[0] == 'p' && st[1] == 'i' && st[2] == 'n' && st[3] == 't')
 		print_last(head, i);
 		else if (st[0] == 'p' && st[1] == 'o' && st[2] == 'p')
-		pop(&head);
+		pop(&head, i);
 		else
 		unknown(st, i);
 	}

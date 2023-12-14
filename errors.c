@@ -25,7 +25,7 @@ void unknown(char *store, int i)
 }
 
 /**
- * unknown - number of args has to be two
+ * empty - number of args has to be two
  * @i: line number
  * Return: void
  */
