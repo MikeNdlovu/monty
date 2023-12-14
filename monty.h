@@ -44,5 +44,6 @@ void argc_errors(void);
 void unknown(char *store, int i);
 void empty(int i);
 int pop(stack_t **head, int m);
+int swap(stack_t **head, int num);
 
 #endif

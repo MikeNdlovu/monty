@@ -14,7 +14,7 @@ int pop(stack_t **h, int m)
 
 	if ((*h) == NULL)
 	{
-	fprintf(stderr, "L%d: can't pop an empty stack", m);
+	fprintf(stderr, "L%d: can't pop an empty stack\n", m);
 	_exit(EXIT_FAILURE);
 	}
 

@@ -39,6 +39,8 @@ int main(int agc, char **agv)
 		print_last(head, i);
 		else if (st[0] == 'p' && st[1] == 'o' && st[2] == 'p')
 		pop(&head, i);
+		else if (st[0] == 's' && st[1] == 'w' && st[2] == 'a' && st[3] == 'p')
+		swap(&head, i);
 		else
 		unknown(st, i);
 	}
