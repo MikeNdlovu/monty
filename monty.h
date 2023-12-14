@@ -47,5 +47,7 @@ int pop(stack_t **head, int m);
 int swap(stack_t **head, int num);
 int add(stack_t **head, int num);
 int sub(stack_t **head, int num);
+int div_int(stack_t **head, int num);
+int mul_int(stack_t **head, int num);
 
 #endif

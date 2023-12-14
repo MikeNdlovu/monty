@@ -47,6 +47,8 @@ int main(int agc, char **agv)
 		;
 		else if (st[0] == 's' && st[1] == 'u' &&  st[2] == 'b')
 		sub(&head, i);
+		else if (st[0] == 'd' && st[1] == 'i' &&  st[2] == 'v')
+		div_int(&head, i);
 		else
 		unknown(st, i);
 	}
