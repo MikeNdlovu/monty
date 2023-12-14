@@ -1,27 +1,35 @@
 #include "monty.h"
 
 /**
- * add_node - adds a node to a list
- * @head: pointer starting ofthe list
- * @num: number being stored in a list
- * Return: list
+ * add - adds first two elements of a linkedlist
+ * @head: pointer to the linked list
+ * @num: line number
+ * Return: success
  */
-stack_t *add_node(stack_t **head, unsigned int num)
+int add(stack_t **head, int num)
 {
-	stack_t *node;
+	int sum, i = 0;
+	stack_t *node, *check;
 
-	if (head == NULL)
-		return ('\0');
+	check = (*head);
+	while (check)
+	{
+	check = check->next;
+	i++;
+	}
 
-	node = malloc(sizeof(stack_t));
-		if (node == NULL)
-		return (NULL);
-	if (*head == NULL)
-	node->next = NULL;
-	else
-	node->next = *head;
-	node->n = num;
+	if (i < 2)
+	{
+	fprintf(stderr, "L%d: can't add, stack too short\n", num);
+	_exit(EXIT_FAILURE);
+	}
+
+	sum = (*head)->n + ((*head)->next)->n;
+	printf("%d\n", sum);
+	node = (*head);
+	node = (node->next)->next;
+	free(*head);
 	*head = node;
 
-	return (*head);
+	return (sum);
 }

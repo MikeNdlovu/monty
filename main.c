@@ -41,6 +41,8 @@ int main(int agc, char **agv)
 		pop(&head, i);
 		else if (st[0] == 's' && st[1] == 'w' && st[2] == 'a' && st[3] == 'p')
 		swap(&head, i);
+		else if (st[0] == 'a' && st[1] == 'd' && st[2] == 'd')
+		add(&head, i);
 		else
 		unknown(st, i);
 	}
