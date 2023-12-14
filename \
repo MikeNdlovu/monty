@@ -43,7 +43,7 @@ int main(int agc, char **agv)
 		swap(&head, i);
 		else if (st[0] == 'a' && st[1] == 'd' && st[2] == 'd')
 		add(&head, i);
-		else if ((st[0] == 'n' && st[1] == 'o' && st[2] == 'p') || st[0] == '#')
+		else if (st[0] == 'n' && st[1] == 'o' && st[2] == 'p' || st[0] == '#')
 		;
 		else if (st[0] == 's' && st[1] == 'u' &&  st[2] == 'b')
 		sub(&head, i);
