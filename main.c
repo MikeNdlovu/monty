@@ -45,6 +45,8 @@ int main(int agc, char **agv)
 		add(&head, i);
 		else if (st[0] == 'n' && st[1] == 'o' && st[2] == 'p')
 		;
+		else if (st[0] == 's' && st[1] == 'u' &&  st[2] == 'b')
+		sub(&head, i);
 		else
 		unknown(st, i);
 	}
