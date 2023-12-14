@@ -43,5 +43,6 @@ size_t free_list(stack_t *h);
 void argc_errors(void);
 void unknown(char *store, int i);
 void empty(int i);
+int pop(stack_t **head);
 
 #endif
