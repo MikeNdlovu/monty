@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * mul - muls first two elements of a linkedlist
+ * mul_int_stack - muls first two elements of a linkedlist
  * @head: pointer to the linked list
  * @num: line number
  * Return: success
  */
-int mul_int(stack_t **head, int num)
+int mul_int_stack(stack_t **head, int num)
 {
 	int mul, i = 0;
 	stack_t *node, *check;

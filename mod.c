@@ -1,14 +1,14 @@
 #include "monty.h"
 
 /**
- * div_int_stack - divs first two elements of a linkedlist
+ * mod_int_stack - mods first two elements of a linkedlist
  * @head: pointer to the linked list
  * @num: line number
  * Return: success
  */
-int div_int_stack(stack_t **head, int num)
+int mod_int_stack(stack_t **head, int num)
 {
-	int div, i = 0;
+	int mod, i = 0;
 	stack_t *node, *check;
 
 	check = (*head);
@@ -20,7 +20,7 @@ int div_int_stack(stack_t **head, int num)
 
 	if (i < 2)
 	{
-	fprintf(stderr, "L%d: can't div, stack too short\n", num);
+	fprintf(stderr, "L%d: can't mod, stack too short\n", num);
 	_exit(EXIT_FAILURE);
 	}
 
@@ -30,12 +30,12 @@ int div_int_stack(stack_t **head, int num)
 	_exit(EXIT_FAILURE);
 	}
 
-	div = ((*head)->next)->n / (*head)->n;
+	mod = ((*head)->next)->n % (*head)->n;
 	node = (*head);
 	node = node->next;
-	node->n = div;
+	node->n = mod;
 	free(*head);
 	*head = node;
 	
-	return (div);
+	return (mod);
 }

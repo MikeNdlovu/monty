@@ -48,9 +48,11 @@ int main(int agc, char **agv)
 		else if (st[0] == 's' && st[1] == 'u' &&  st[2] == 'b')
 		sub(&head, i);
 		else if (st[0] == 'd' && st[1] == 'i' &&  st[2] == 'v')
-		div_int(&head, i);
+		div_int_stack(&head, i);
 		else if (st[0] == 'm' && st[1] == 'u' &&  st[2] == 'l')
-		mul_int(&head, i);
+		mul_int_stack(&head, i);
+		else if (st[0] == 'm' && st[1] == 'o' &&  st[2] == 'd')
+		mod_int_stack(&head, i);
 		else
 		unknown(st, i);
 	}
