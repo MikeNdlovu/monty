@@ -53,6 +53,8 @@ int main(int agc, char **agv)
 		mul_int_stack(&head, i);
 		else if (st[0] == 'm' && st[1] == 'o' &&  st[2] == 'd')
 		mod_int_stack(&head, i);
+		else if (st[0] == 'p' && st[1] == 'c' && st[2] == 'h' && st[3] == 'a' && st[4] == 'r')
+		pchar(head, i);
 		else
 		unknown(st, i);
 	}

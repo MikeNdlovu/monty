@@ -50,5 +50,6 @@ int sub(stack_t **head, int num);
 int div_int_stack(stack_t **head, int num);
 int mul_int_stack(stack_t **head, int num);
 int mod_int_stack(stack_t **head, int num);
+void pchar(stack_t *h, int num);
 
 #endif
